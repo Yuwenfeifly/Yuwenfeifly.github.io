@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+	*{margin: 0;padding: 0;list-style: none;}
+	body{background: #069;}
+	#box{width:840px;height:210px;border:1px solid #000;margin: 150px auto; overflow: hidden;position: relative;}
+	#box ul{width:840px;height:210px;position: absolute;left:0;top:0;}
+	#box ul li{width:200px;height:200px;border:5px solid #fff;float: left;}
+	#box ul li img{width:200px;height:200px;}
+	#box #left{opacity: 0;filter:alpha(opacity:0);width:420px;height:210px;background: blue;position: absolute;left:0;top:0;z-index: 99;}
+	#box #right{opacity: 0;filter:alpha(opacity:0);width:420px;height:210px;background: orange;position: absolute;right:0;top:0;z-index: 99;}
+	</style>
+	<script>
+		window.onload=function(){
+			var oBox=document.getElementById('box');
+			var oLeft=document.getElementById('left');
+			var oRight=document.getElementById('right');
+			var oUl=oBox.getElementsByTagName('ul')[0];
+			var l=0;
+			var timer=null;
+
+			oUl.innerHTML+=oUl.innerHTML;
+			var aLi=oUl.children;
+			oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+			var ow=oUl.offsetWidth/2;
+
+			function toLeft(){
+				timer=setInterval(function(){
+					l-=4;
+					if(l<0){
+						l%=ow;	
+					}else{
+						l=(l%ow-ow)%ow;
+					}
+					
+						oUl.style.left=l+'px';
+					},30)
+				}
+			function toRight(){
+				timer=setInterval(function(){
+					l+=4;
+					if(l<0){
+						l%=ow;	
+					}else{
+						l=(l%ow-ow)%ow;
+					}
+					
+						oUl.style.left=l+'px';
+					},30)
+				}
+			toLeft();
+			oLeft.onmouseover=function(){
+				clearInterval(timer);
+				toLeft();
+			};
+			oRight.onmouseover=function(){
+				clearInterval(timer);
+				toRight();
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="box">
+		<div id="left"></div>
+		<div id="right"></div>
+		<ul>
+			<li><img src="image/1.jpg" alt="" /></li>
+			<li><img src="image/2.jpg" alt="" /></li>
+			<li><img src="image/3.jpg" alt="" /></li>
+			<li><img src="image/4.jpg" alt="" /></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{ padding:0; margin:0; list-style:none;}
+	body{background:#069;}
+	ul{margin-top: 100px;}
+	li{ width:12.5%; float:left; height:300px; background:#CCC; border:1px solid yellow; box-sizing:border-box;text-align: center;color:#fff;font-size: 40px;line-height: 300px;}
+	.on{ background:#999;}
+</style>
+<script src="mp3/sound.js"></script>
+<script>
+	window.onload=function(){
+		var aLi=document.querySelectorAll('li');
+		
+		var oA=new Audio();
+		
+		document.onkeydown=function(ev){
+			oA.src=oggSound['sound'+ev.keyCode];
+			oA.play();
+			aLi[ev.keyCode-49].className='on';
+		};
+		
+		document.onkeyup=function(ev){
+			aLi[ev.keyCode-49].className='';
+		};	
+	};
+</script>
+</head>
+
+<body>
+	<ul>
+    	<li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>

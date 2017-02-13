@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+	body{background:#069;}
+	.clock{width:400px;height:400px;background: url(img/clock.png);margin:100px auto;position: relative;}
+	.clock span{position: absolute;bottom:50%;left:50%;transform-origin:center bottom;}
+	.clock .hou{width:6px; height:100px;background: orange;margin-left: -3px;border-radius: 3px;}
+	.clock .min{width:4px; height:120px;background: green;margin-left: -2px;border-radius: 2px;}
+	.clock .sec{width:2px; height:140px;background: red;margin-left: -1px;}
+	.clock  i{width:16px;height:16px;background: #333;position: absolute;left:50%;top:50%;border-radius: 50%;margin-left:-8px;margin-top: -8px;}
+	</style>
+	<script>
+		window.onload=function(){
+				var oH=document.querySelector('.hou');
+				var oM=document.querySelector('.min');
+				var oS=document.querySelector('.sec');
+
+				clock();
+
+				function clock(){
+					var oDate=new Date();
+					var oHou=oDate.getHours();
+					var oMin=oDate.getMinutes();
+					var oSec=oDate.getSeconds();
+					var oMs=oDate.getMilliseconds();
+					oH.style.transform='rotate('+(oHou*30+oMin/60*30)+'deg)';
+					oM.style.transform='rotate('+(oMin*6+oSec/60*6)+'deg)';
+					oS.style.transform='rotate('+(oSec*6+oMs/1000*6)+'deg)';	
+				}
+
+				setInterval(clock,30);
+
+
+		}
+	</script>
+</head>
+<body>
+	<div class="clock">
+		<span class="hou"></span>
+		<span class="min"></span>
+		<span class="sec"></span>
+		<i></i>
+	</div>
+</body>
+</html>
