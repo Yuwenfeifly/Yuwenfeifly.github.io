@@ -96,6 +96,8 @@ body{background:#352A48;}
 .call .callnav li{margin:0 auto;width:808px;height:50px;line-height: 50px;content:""; display:block;clear:both;zoom:1;padding-top:300px; }
 .call .callnav li .l{width:508px;float: left;}
 .call .callnav li .r{float: left;}
+.call .callnav li .r .down{display: block;color: #666;text-align: center;line-height: 30px;width:110px;background: #dfdfdf;font-size: 14px;padding: 4px;border-radius: 4px;margin-top: 20px;}
+.call .callnav li .r .down:hover{background:green;color:#fff;}
 
 /*production call end */
 .footer{width:100%;min-width:980px;background:#653EB3;}
