@@ -3,113 +3,193 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
-	<link type="text/css" rel="stylesheet" href="css/base.css">
-	<link type="text/css" rel="stylesheet" href="css/genrenzuopin.css">
-	<script>
-		if(window.navigator.userAgent.indexOf("Chrome") !== -1){
-		}else{alert('Sorry \n\n因部分炫酷效果没做兼容处理! 导致您的浏览器不支持部分效果，为了体验更佳的效果，建议使用谷歌浏览器或高版本的浏览器哦！');}
-	</script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/move1.js"></script>
-	<script src="js/doMove.js"></script>
-	<script src="js/startMove.js"></script>
-	<script src="js/grzp.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>个人主页</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/iconfont.css">
 </head>
 <body>
-	<div class="header">
-		<div class="w">
-			<div class="hd_c clearfix">
-				<div class="hd_cl fl">
-					<h1>Hello!</h1>
-				</div>
-				<ul class="hd_cr fr clearfix" id="hd_cr">
-					<li class="active">首页</li>
-					<li><a href="项目案例.html">项目案例</a></li>
-					<li><a href="个人简介.html">个人简介</a></li>
-					<li><a href="联系方式.html">联系方式</a></li>
-					<li class="box1"></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!--header end-->
-	<div class="banner" id="banner">
-		<h2>WELCOME</h2>
-		<p>EVERYONE COME TO MY PERSONAL PAGE<br /> 
-		
-							 MY ZONE</p>
-		<a href="javascript:;" class="down" id="down">START</a>
-	</div>
-	<!--banner end-->
-	<div class="introduce">
-		<div class="w">
-			<div class="introduce_c">
-				<h2>作 者</h2>
-				<div id="tox"class="tox"><img src="img/index.png" alt=""></div>
-				<p>Hello！我叫于文飞，欢迎来到我的个人站<br />以下是我学习的小例子！</p>
-				<ul id="indCon" class="indCon">
-					<li id="me"><a href="个人简介.html">个人简介<span></span></a></li>
-					<li id="xm"><a href="项目案例.html">项目作品<span></span></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!--introduce end-->
-	<div class="prodshow">
-	</div>
-	<!--prodshow end-->
-	<div class="production">
-		<div class="w">
-			<h3>项目案例</h3>
-			<ul id="p_con" class="p_con clearfix">
-				<li id="3d" title="双击哦或拖动试试！">
-					<img src="img/3D.png" alt="">
-					<span></span>
-					<b>3D轮换 例子</b>
+		<ul class="side-bar">
+			<li id="home"><span  class="iconfont">&#xe642;</span></li>
+			<li id="ewm"><span  class="iconfont">&#xe627;</span></li>
+			<li id="down"><span  class="iconfont">&#xe6c1;</span></li>
+		</ul>
+		<div class="page-content">
+			<ul class="project-list clearfix">
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://ol-site.olquan.com/ol/weixin/index/modelVM?code=index">
+						<img src="img/img1.jpg" alt="" class="img">
+						<h2><span  class="iconfont">&#xe501;</span>微信端</h2>
+						<img src="img/ol.png" alt="" class="icon">
+						<span  class="iconfont wei-icon">&#xe501;</span>
+					</a>
 				</li>
-				<li id="iphone" title="双击哦或拖动试试！">
-					<img src="img/iphone.png" alt="">
-					<span></span>
-					<b>iphone 例子</b>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://weixin.zj-yunti.com">
+						<img src="img/img2.jpg" alt="" class="img">
+						<h2><span  class="iconfont">&#xe501;</span>微信端</h2>
+						<img src="img/yunti.png" alt="" class="icon">
+						<span  class="iconfont wei-icon">&#xe501;</span>
+					</a>
 				</li>
-				<li id="3dm" title="双击哦或拖动试试！">
-					<img src="img/3Dm.png" alt="">
-					<span></span>
-					<b>3D立体效果 例子</b>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx939c8d520de49815&redirect_uri=http%3A%2F%2Fyefuadmin.51huaguoshan.com%2Fyefu%2Fweixin%2Fsafe%2FoAuth%3FoldUrl%3Dnull&response_type=code&scope=snsapi_base&state=oa=4|degree=_1#wechat_redirect">
+						<img src="img/img9.jpg" alt="" class="img">
+						<h2><span  class="iconfont">&#xe501;</span>微信端</h2>
+						<img src="img/yefu.png" alt="" class="icon">
+						<span  class="iconfont wei-icon">&#xe501;</span>
+					</a>
 				</li>
-				<li id="fenkuai" title="双击哦或拖动试试！">
-					<img src="img/fenkuai.png" alt="">
-					<span></span>
-					<b>分块 例子</b>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://weixin.youlefou.cn/wx/index?tag=travel&memberId=2">
+						<img src="img/img8.jpg" alt="" class="img">
+						<h2><span  class="iconfont">&#xe501;</span>微信端</h2>
+						<img src="img/youlefou.png" alt="" class="icon">
+						<span  class="iconfont wei-icon">&#xe501;</span>
+					</a>
 				</li>
-				<li  id="sfq" title="双击哦或拖动试试！">
-					<img src="img/3Dtupianhuan.png" alt="">
-					<span></span>
-					<b>3D图片环 例子</b>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://seafishingstatic.o2o2m.com/weixin/index">
+						<img src="img/img7.jpg" alt="" class="img">
+						<h2><span  class="iconfont">&#xe501;</span>微信端</h2>
+						<img src="img/diaoke.png" alt="" class="icon">
+						<span  class="iconfont wei-icon">&#xe501;</span>
+					</a>
 				</li>
-				<li id="gwzs" title="双击哦或拖动试试！">
-					<img src="img/gwzs.png" alt="">
-					<span></span>
-					<b>官网展示 例子</b>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://admin.yukeyu.net/mobi/match/match?from=singlemessage">
+						<img src="img/img11.jpg" alt="" class="img">
+						<h2><span  class="iconfont">&#xe501;</span>微信端</h2>
+						<span  class="iconfont wei-icon">&#xe501;</span>
+					</a>
+				</li>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://www.mianmoxiaowu.com">
+						<img src="img/img6.jpg" alt="" class="img">
+						<h2><span  class="iconfont pc">&#xe63e;</span>电脑端</h2>
+						<img src="img/mianmo.png" alt="" class="icon">
+						<span  class="iconfont wei-icon pc-icon">&#xe63e;</span>
+					</a>
+				</li>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://www.youlefou.cn">
+						<img src="img/img5.jpg" alt="" class="img">
+						<h2><span  class="iconfont pc">&#xe63e;</span>电脑端</h2>
+						<img src="img/youlefou-pc.png" alt="" class="icon">
+						<span  class="iconfont wei-icon pc-icon">&#xe63e;</span>
+					</a>
+				</li>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://www.meem.com.cn">
+						<img src="img/img4.jpg" alt="" class="img">
+						<h2><span  class="iconfont pc">&#xe63e;</span>电脑端</h2>
+						<span  class="iconfont wei-icon pc-icon">&#xe63e;</span>
+					</a>
+				</li>
+				<li class="project-item" data-scroll-reveal="enter left over 0.6s and move 100px after 0.5s">
+					<a href="http://www.machineinfo-zj.com">
+						<img src="img/img3.jpg" alt="" class="img">
+						<h2><span  class="iconfont pc">&#xe63e;</span>电脑端</h2>
+						<span  class="iconfont wei-icon pc-icon">&#xe63e;</span>
+					</a>
 				</li>
 			</ul>
-			<div id="more" class="more"><a href="项目案例.html">更多>><span class="moreh"></span></a></div>
-
 		</div>
-		<a href="javascript:;" class="top">︽<br>Top</div>
-	</div>
-	<!--production end-->
-	<div class="footer">
-		<div class="w">
-			<div class="f_con">
-				<p>联系电话:15168343053 <br /> 地址:北京市昌平区北七家镇白庙中街<br />
-				 邮箱:WebYuwenfei@163.com</p>
-				 <div class="weixin" id="weixin"><img src="img/weix.png" alt=""></div>
-				 <img src="img/weix.png" alt="" class="weixinb" id="weixinb" />
+		<div class="right-ico"><img src="img/right-icon.png" alt=""></div>
+		<div class="down-wrapper down-wrapper2 clearfix">
+			<div class="resume">简历</div>
+			<div class="down-list">
+				<h2>下载简历</h2>
+				<a href="于文飞前端杭州.pdf">pdf版</a>
+				<a href="于文飞前端杭州.doc">word版</a>
 			</div>
 		</div>
-	</div>
+		<div class="ewm-wrapper down-wrapper clearfix">
+			<div class="resume">二维码</div>
+			<div class="down-list">
+				<h2>用微信扫二维码进入微信端</h2>
+				<img src="img/ll.png" alt="">
+			</div>
+		</div>
+		<div class="mask"></div>
+		<div class="mask2"></div>
+		<div class="down-list2">
+			<h2>下载简历</h2>
+			<a href="于文飞前端杭州.pdf">pdf版</a>
+			<a href="于文飞前端杭州.doc">word版</a>
+			<div class="close"></div>
+		</div>
+		<div class="mobile-ewm-wrapper">
+			<img src="img/ll.png" alt="">
+			<p>1.如果已经在微信里打开本站可以忽略此条信息</p>
+			<p>2.你可以通过微信扫一扫本二维码在微信中打开，只有这样你才可以浏览微信端项目</p>
+			<div class="close"></div>
+		</div>
+	<!-- 以下为js部分 -->
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="js/scrollReveal.js" type="text/javascript" charset="utf-8" ></script>
+	<script>
+		if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+				(function(){
+				window.scrollReveal = new scrollReveal({reset:true});
+			})();
+		};
+
+		$('#down').bind("click",function(e){
+			$('.down-list2').addClass('on');
+			$('.mask').css({display:"block"});
+			 e.stopPropagation();
+		})
+		$('.down-list2 .close').bind("click",function(e){
+			$('.down-list2').removeClass('on');
+			$('.mask').css({display:"none"});
+			 e.stopPropagation();
+		})
+		$(document).bind("click",function(e){
+		  var _con =$('.down-list2');   // 设置目标区域
+		  if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
+		    	$('.down-list2').removeClass('on');
+			   	$('.mask').css({display:"none"}); // 功能代码
+		  }
+		  e.stopPropagation();
+		});
+		// 移动端简历遮罩层
+
+		$('#ewm').bind("click",function(e){
+			$('.mobile-ewm-wrapper').addClass('on');
+			$('.mask2').show();
+			 e.stopPropagation();
+		})
+		$('.mobile-ewm-wrapper .close').bind("click",function(e){
+			$('.mobile-ewm-wrapper').removeClass('on');
+			$('.mask2').hide(); 
+			 e.stopPropagation();
+		})
+		// 移动端二维码遮罩层
+
+		$('#home').click(function(){
+			$('body,html').stop().animate({scrollTop:0},100);
+		})
+		// 返回顶部和向下
+
+		$('#ewm').click(function(){
+			$('.ewm-wrapper').css({right:0});
+			setTimeout(function(){
+				$('.ewm-wrapper').css({right:-200});
+			},3000)
+			return false
+		})
+		// 二维码出现
+
+		$('#down').click(function(){
+			$('.down-wrapper2').css({right:0});
+			setTimeout(function(){
+				$('.down-wrapper2').css({right:-200});
+			},3000)
+			return false
+		})
+		// 简历出现
+	</script>
 </body>
 </html>
